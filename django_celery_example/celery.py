@@ -26,4 +26,5 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 def divide(x, y):
     import time
     time.sleep(5)
-    return x / y
+    result = x/ y
+    return result
