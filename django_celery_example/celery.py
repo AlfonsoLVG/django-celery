@@ -24,7 +24,11 @@ app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 
 @app.task
 def divide(x, y):
+    # Breakpoint para debuggear tareas de celery
+    # from celery.contrib import rdb
+    # rdb.set_trace()
+
     import time
-    time.sleep(5)
+    time.sleep(10)
     # result = x/ y
     return x / y
