@@ -3,4 +3,13 @@
 set -o errexit
 set -o nounset
 
-python manage.py celery_worker
+# Correr solo al levantar el proyecto
+# celery -A django_celery_example worker -l INFO
+
+# Correr cada que haya cambios en código con un comando de django
+# python manage.py celery_worker
+
+# Correr cada que haya cambios en un archivo de python
+watchfiles \
+  --filter python \
+  'celery -A django_celery_example worker --loglevel=info'
