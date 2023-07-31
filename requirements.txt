@@ -5,3 +5,5 @@ flower==1.2.0
 psycopg2-binary==2.9.2
 watchfiles==0.16.1
 requests==2.28.1
+channels==3.0.5
+channels-redis==3.4.1
